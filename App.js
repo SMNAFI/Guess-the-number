@@ -32,9 +32,10 @@ export default function App() {
     setRoundsCount(0);
   }
 
-  const gameOverHandler = () => {
+  const gameOverHandler = (numberOfRound) => {
     setGameOver(true);
-  }
+    setRoundsCount(numberOfRound);
+  };
 
   let screen = <GameStartScreen onPickNumber={pickedNumberHandler}/>;
   if(userNumber) {

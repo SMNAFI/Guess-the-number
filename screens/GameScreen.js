@@ -36,7 +36,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
 
   useEffect(() => {
     if (userNumber === currentGuess) {
-      onGameOver();
+      onGameOver(listLength);
     }
     // useEffect will be triggred if any of the dependency will change
   }, [currentGuess, userNumber, onGameOver]);
